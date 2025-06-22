@@ -1,0 +1,60 @@
+.navbar-nav .nav-item {
+  margin-right: 1.5rem;
+}
+.navbar {
+  border-bottom: 2px solid rgba(146, 138, 138, 0.154); /* purple border */
+}
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6a0dad, #007bff); /* purple to blue */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 36px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+   
+}
+
+
+
+    @media (min-width: 992px) {
+  #navbarSupportedContent {
+    background: none !important;
+  }
+}
+
+
+
+
+@keyframes glowFade {
+  from {
+    text-shadow: 0 0 10px #6a0dad, 0 0 20px #0000ff;
+  }
+  to {
+    text-shadow: 0 0 15px #00ffff, 0 0 30px #6a0dad;
+  }
+}
+
+.fade-down {
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: fadeDown 0.8s ease-out forwards;
+}
+
+@keyframes fadeDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
