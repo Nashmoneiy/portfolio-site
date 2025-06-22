@@ -1,6 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   const navbarRef = useRef();
 
   // Handle link click
@@ -112,10 +114,15 @@ function Navbar() {
             <button
               className="navbar-toggler shadow-none border-0 p-0 m-0"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
+              onClick={() => {
+                const collapse = document.getElementById(
+                  "navbarSupportedContent"
+                );
+                if (collapse) {
+                  collapse.classList.toggle("show");
+                  setIsOpen(!isOpen);
+                }
+              }}
               aria-label="Toggle navigation"
               style={{
                 width: "24px",
@@ -135,7 +142,7 @@ function Navbar() {
             className="collapse navbar-collapse w-100"
             id="navbarSupportedContent"
             style={{
-              background: "linear-gradient(135deg, #000000, #0000ff)",
+              background: "linear-gradient(135deg, blue, purple)",
               borderRadius: "0 0 12px 12px",
             }}
           >
