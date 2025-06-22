@@ -1,13 +1,32 @@
 import React from "react";
+import TestimonialSlider from "../inc/TestimonialSlider";
+import Footer from "../inc/Footer";
 
 function Home() {
   return (
-    <div id="home">
+    <div id="home" style={{ margin: 0, padding: 0, overflowX: "hidden" }}>
       <section id="home" className="section justify-content-center fade-down">
         <div className="row">
           <div className="col-md-12 text-center justify-content-center">
             {/* Icon */}
-            <div className="d-flex justify-content-center py-5 mt-3"></div>
+            <div className="d-flex justify-content-center py-5 mt-3">
+              <div
+                className="icon-circle"
+                style={{
+                  backgroundColor: "#e8d9ff",
+                  width: "60px",
+                  height: "60px",
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "1.8rem",
+                  color: "#6a0dad",
+                }}
+              >
+                <i className="bi bi-bar-chart-fill"></i>
+              </div>
+            </div>
 
             {/* Title */}
             <p
@@ -62,9 +81,10 @@ function Home() {
                 fontFamily: "'Rubik', sans-serif",
               }}
             >
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when standard dummy text
+              At Nashy Dev, we craft visually stunning, high-performance
+              websites that help businesses thrive online. From sleek portfolios
+              to full-scale web apps, we bring your digital vision to life with
+              precision and flair.
             </p>
 
             {/* Subscribe Button */}
@@ -241,6 +261,7 @@ function Home() {
       </section>
 
       <section
+        id="section2"
         className="section bg-c-light py-5 fade-down"
         style={{ backgroundColor: "#f8f9fa" }}
       >
@@ -349,6 +370,10 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <div style={{ overflowX: "hidden" }}>
+        <TestimonialSlider />
+      </div>
     </div>
   );
 }

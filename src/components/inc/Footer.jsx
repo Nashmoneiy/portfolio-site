@@ -17,8 +17,9 @@ function Footer() {
             {/* Brand */}
             <div className="col-12 col-md-4">
               <h5 className="fw-bold mb-2">Nashy</h5>
-              <p style={{ fontSize: "0.9rem", color: "#ccc" }}>
-                AI-powered solutions for prompt monitoring and brand visibility.
+              <p style={{ fontSize: "0.9rem", color: "lightslategrey" }}>
+                We build websites and web-app solutions for your brand
+                visibility.
               </p>
             </div>
 
@@ -43,10 +44,12 @@ function Footer() {
             <div className="col-12 col-md-4">
               <h6 className="fw-bold text-uppercase mb-2">Contact</h6>
               <p className="mb-1">
-                <i className="bi bi-envelope-fill me-2"></i> support@nashy.com
+                <i className="bi bi-envelope-fill me-2"></i>{" "}
+                kelvinnash152@gmail.com
               </p>
               <p className="mb-2">
-                <i className="bi bi-phone-fill me-2"></i> +234 800 000 0000
+                <i className="bi bi-phone-fill me-2"></i> +234
+                8135817295(whatsapp)
               </p>
               <div className="d-flex justify-content-center justify-content-md-start gap-3">
                 <i className="bi bi-facebook text-white fs-5"></i>
