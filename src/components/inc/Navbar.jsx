@@ -1,8 +1,36 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 function Navbar() {
+  const navbarRef = useRef();
+
+  // Handle link click
+  const handleNavClick = () => {
+    const navbarCollapse = document.getElementById("navbarSupportedContent");
+    if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+      navbarCollapse.classList.remove("show");
+    }
+  };
+
+  // Handle outside click
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      const collapse = document.getElementById("navbarSupportedContent");
+      if (
+        collapse &&
+        collapse.classList.contains("show") &&
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target)
+      ) {
+        collapse.classList.remove("show");
+      }
+    };
+
+    document.addEventListener("click", handleOutsideClick);
+    return () => document.removeEventListener("click", handleOutsideClick);
+  }, []);
+
   return (
-    <div>
+    <div ref={navbarRef}>
       <nav
         className="navbar navbar-expand-lg fixed-top"
         style={{
@@ -13,30 +41,30 @@ function Navbar() {
         }}
       >
         <div className="container-fluid p-0 px-3">
-          {/* Brand + Toggler in flex row */}
           <div className="d-flex w-100 justify-content-between align-items-center">
-            {/* Brand */}
             <a
               href="#"
               className="navbar-brand m-0 p-0 d-flex align-items-center gap-3"
-              style={{ fontWeight: "bold", lineHeight: "1.2" }}
+              style={{
+                fontWeight: "bold",
+                lineHeight: "1.2",
+                textDecoration: "none",
+              }}
             >
-              {/* Icon Circle */}
+              {/* Logo Icon - transparent background */}
               <div
-                className="icon-circle"
                 style={{
-                  backgroundColor: "#e8d9ff",
                   width: "50px",
                   height: "50px",
                   borderRadius: "50%",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: "1.6rem",
+                  fontSize: "1.8rem",
                   color: "#6a0dad",
                 }}
               >
-                <i className="bi bi-bar-chart-fill"></i>
+                <i className="bi bi-lightning-fill"></i>
               </div>
 
               {/* Brand Text */}
@@ -44,22 +72,23 @@ function Navbar() {
                 <div>
                   <span
                     style={{
-                      fontSize: "2rem",
+                      fontSize: "2.2rem",
                       background: "linear-gradient(90deg, #6a0dad, #0000ff)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
-                      display: "inline-block",
                       fontWeight: "bold",
+                      textShadow: "0 0 4px rgba(106, 13, 173, 0.4)",
                     }}
                   >
                     Nashy
                   </span>
                   <span
                     style={{
-                      color: "#222",
                       marginLeft: "5px",
                       fontSize: "1.7rem",
                       fontWeight: "600",
+                      color: "#6a0dad",
+                      fontFamily: "'Orbitron', sans-serif",
                     }}
                   >
                     dev
@@ -70,7 +99,7 @@ function Navbar() {
                   className="mt-1"
                   style={{
                     color: "lightslategrey",
-                    fontSize: "0.95rem",
+                    fontSize: "0.9rem",
                     fontWeight: "400",
                   }}
                 >
@@ -118,19 +147,23 @@ function Navbar() {
               }}
             >
               <li className="nav-item me-lg-4">
-                <a className="nav-link" href="#home">
+                <a className="nav-link" href="#home" onClick={handleNavClick}>
                   <span className="d-lg-none text-white">Home</span>
                   <span className="d-none d-lg-inline text-black">Home</span>
                 </a>
               </li>
               <li className="nav-item me-lg-4">
-                <a className="nav-link" href="#section2">
+                <a
+                  className="nav-link"
+                  href="#section2"
+                  onClick={handleNavClick}
+                >
                   <span className="d-lg-none text-white">About</span>
                   <span className="d-none d-lg-inline text-black">About</span>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#footer">
+                <a className="nav-link" href="#footer" onClick={handleNavClick}>
                   <span className="d-lg-none text-white">Contact</span>
                   <span className="d-none d-lg-inline text-black">Contact</span>
                 </a>

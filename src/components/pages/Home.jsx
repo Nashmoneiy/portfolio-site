@@ -7,24 +7,7 @@ function Home() {
         <div className="row">
           <div className="col-md-12 text-center justify-content-center">
             {/* Icon */}
-            <div className="d-flex justify-content-center py-5 mt-3">
-              <div
-                className="icon-circle"
-                style={{
-                  backgroundColor: "#e8d9ff",
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "1.8rem",
-                  color: "#6a0dad",
-                }}
-              >
-                <i className="bi bi-bar-chart-fill"></i>
-              </div>
-            </div>
+            <div className="d-flex justify-content-center py-5 mt-3"></div>
 
             {/* Title */}
             <p
