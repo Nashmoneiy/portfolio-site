@@ -4,29 +4,15 @@ import Footer from "../inc/Footer";
 
 function Home() {
   return (
-    <div id="home" style={{ margin: 0, padding: 0, overflowX: "hidden" }}>
+    <div
+      id="home"
+      style={{ margin: 0, padding: 0, overflowX: "hidden", width: "100%" }}
+    >
       <section id="home" className="section justify-content-center fade-down">
         <div className="row">
           <div className="col-md-12 text-center justify-content-center">
             {/* Icon */}
-            <div className="d-flex justify-content-center py-5 mt-3">
-              <div
-                className="icon-circle"
-                style={{
-                  backgroundColor: "#e8d9ff",
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "1.8rem",
-                  color: "#6a0dad",
-                }}
-              >
-                <i className="bi bi-bar-chart-fill"></i>
-              </div>
-            </div>
+            <div className="d-flex justify-content-center py-5 mt-3"></div>
 
             {/* Title */}
             <p
@@ -71,14 +57,11 @@ function Home() {
               className="p-section2 mx-auto"
               style={{
                 fontSize: "1.2rem",
-                width: "55%",
+                width: "90%",
                 color: "lightslategrey",
-                display: "-webkit-box",
-                WebkitLineClamp: 2,
-                WebkitBoxOrient: "vertical",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
                 fontFamily: "'Rubik', sans-serif",
+                textAlign: "center",
+                lineHeight: "1.6",
               }}
             >
               At Nashy Dev, we craft visually stunning, high-performance
@@ -119,149 +102,155 @@ function Home() {
           <div className="row text-center mb-4">
             <div className="col-12">
               <h4 className="fw-bold" style={{ color: "black" }}>
-                Services
+                What I Can Do For You
               </h4>
             </div>
           </div>
 
-          <div className="row gy-4">
+          <div className="d-flex flex-wrap justify-content-center gap-4">
             {/* Card 1 */}
-            <div className="col-12 col-md-6 col-lg-4">
+            <div
+              style={{
+                flex: "1 1 300px",
+                maxWidth: "360px",
+                border: "1px solid lightslategrey",
+                borderRadius: "12px",
+                padding: "2rem",
+                background: "#fff",
+              }}
+            >
               <div
                 style={{
-                  border: "1px solid lightslategrey",
-                  borderRadius: "12px",
-                  padding: "2rem",
-                  background: "#fff",
-                  height: "100%",
+                  backgroundColor: "#f3e8ff",
+                  borderRadius: "50%",
+                  width: "48px",
+                  height: "48px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  margin: "0 auto 1rem",
+                  fontSize: "1.5rem",
+                  color: "#6a0dad",
                 }}
               >
-                <div
-                  style={{
-                    backgroundColor: "#f3e8ff",
-                    borderRadius: "50%",
-                    width: "48px",
-                    height: "48px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    margin: "0 auto 1rem",
-                    fontSize: "1.5rem",
-                    color: "#6a0dad",
-                  }}
-                >
-                  🧠
-                </div>
-                <h5 className="fw-bold text-center">Create Campaigns</h5>
-                <p
-                  className="text-muted text-center"
-                  style={{ fontSize: "0.9rem" }}
-                >
-                  Set up monitoring for your brand names and domains
-                </p>
-                <p>
-                  Define specific prompts that will be used to test if AI models
-                  mention your brand.
-                </p>
-                <a href="#" style={{ color: "purple", fontWeight: "bold" }}>
-                  View pricing →
-                </a>
+                💻
               </div>
+              <h5 className="fw-bold text-center">Custom Website Design</h5>
+              <p
+                className="text-muted text-center"
+                style={{ fontSize: "0.9rem" }}
+              >
+                Stand out online with a fast, mobile-friendly website
+              </p>
+              <p>
+                I create clean, modern websites tailored to your brand. Designed
+                to convert visitors into paying customers.
+              </p>
+              <a
+                href="#contact"
+                style={{ color: "purple", fontWeight: "bold" }}
+              >
+                Get started →
+              </a>
             </div>
 
             {/* Card 2 */}
-            <div className="col-12 col-md-6 col-lg-4">
+            <div
+              style={{
+                flex: "1 1 300px",
+                maxWidth: "360px",
+                border: "1px solid lightslategrey",
+                borderRadius: "12px",
+                padding: "2rem",
+                background: "#fff",
+              }}
+            >
               <div
                 style={{
-                  border: "1px solid lightslategrey",
-                  borderRadius: "12px",
-                  padding: "2rem",
-                  background: "#fff",
-                  height: "100%",
+                  backgroundColor: "#f3e8ff",
+                  borderRadius: "50%",
+                  width: "48px",
+                  height: "48px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  margin: "0 auto 1rem",
+                  fontSize: "1.5rem",
+                  color: "#6a0dad",
                 }}
               >
-                <div
-                  style={{
-                    backgroundColor: "#f3e8ff",
-                    borderRadius: "50%",
-                    width: "48px",
-                    height: "48px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    margin: "0 auto 1rem",
-                    fontSize: "1.5rem",
-                    color: "#6a0dad",
-                  }}
-                >
-                  📊
-                </div>
-                <h5 className="fw-bold text-center">Run Checks</h5>
-                <p
-                  className="text-muted text-center"
-                  style={{ fontSize: "0.9rem" }}
-                >
-                  Test your prompts against AI models
-                </p>
-                <p>
-                  We'll run your prompts through AI models and analyze if they
-                  mention your brand.
-                </p>
-                <a href="#" style={{ color: "purple", fontWeight: "bold" }}>
-                  View pricing →
-                </a>
+                🛒
               </div>
+              <h5 className="fw-bold text-center">E-Commerce Solutions</h5>
+              <p
+                className="text-muted text-center"
+                style={{ fontSize: "0.9rem" }}
+              >
+                Launch your online store with confidence
+              </p>
+              <p>
+                From product setup to payment integration, I’ll build a powerful
+                online store that runs smoothly on all devices.
+              </p>
+              <a
+                href="#contact"
+                style={{ color: "purple", fontWeight: "bold" }}
+              >
+                Build your store →
+              </a>
             </div>
 
             {/* Card 3 */}
-            <div className="col-12 col-md-6 col-lg-4 mx-md-auto">
+            <div
+              style={{
+                flex: "1 1 300px",
+                maxWidth: "360px",
+                border: "1px solid lightslategrey",
+                borderRadius: "12px",
+                padding: "2rem",
+                background: "#fff",
+              }}
+            >
               <div
                 style={{
-                  border: "1px solid lightslategrey",
-                  borderRadius: "12px",
-                  padding: "2rem",
-                  background: "#fff",
-                  height: "100%",
+                  backgroundColor: "#f3e8ff",
+                  borderRadius: "50%",
+                  width: "48px",
+                  height: "48px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  margin: "0 auto 1rem",
+                  fontSize: "1.5rem",
+                  color: "#6a0dad",
                 }}
               >
-                <div
-                  style={{
-                    backgroundColor: "#f3e8ff",
-                    borderRadius: "50%",
-                    width: "48px",
-                    height: "48px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    margin: "0 auto 1rem",
-                    fontSize: "1.5rem",
-                    color: "#6a0dad",
-                  }}
-                >
-                  📈
-                </div>
-                <h5 className="fw-bold text-center">Track Results</h5>
-                <p
-                  className="text-muted text-center"
-                  style={{ fontSize: "0.9rem" }}
-                >
-                  Monitor brand mention rates over time
-                </p>
-                <p>
-                  Analyze detailed statistics and trends to see how often your
-                  brand appears.
-                </p>
-                <a href="#" style={{ color: "purple", fontWeight: "bold" }}>
-                  View pricing →
-                </a>
+                ⚡
               </div>
+              <h5 className="fw-bold text-center">Speed & SEO Optimization</h5>
+              <p
+                className="text-muted text-center"
+                style={{ fontSize: "0.9rem" }}
+              >
+                Get found faster. Load faster. Convert better.
+              </p>
+              <p>
+                I optimize every website for speed, mobile usability, and search
+                engines — so your business performs at its best.
+              </p>
+              <a
+                href="#contact"
+                style={{ color: "purple", fontWeight: "bold" }}
+              >
+                Optimize now →
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <section
-        id="section2"
+        id="section3"
         className="section bg-c-light py-5 fade-down"
         style={{ backgroundColor: "#f8f9fa" }}
       >
@@ -308,7 +297,7 @@ function Home() {
                   className="text-muted text-center"
                   style={{ fontSize: "0.9rem" }}
                 >
-                  $30/month
+                  Starting at $60
                 </p>
 
                 <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
@@ -322,7 +311,7 @@ function Home() {
                     >
                       ✔️
                     </span>
-                    Unlimited brand campaigns
+                    Unlimited website revisions
                   </li>
                   <li>
                     <span
@@ -334,7 +323,7 @@ function Home() {
                     >
                       ✔️
                     </span>
-                    Daily automated AI response checks
+                    Daily website checks
                   </li>
                   <li>
                     <span
@@ -346,7 +335,7 @@ function Home() {
                     >
                       ✔️
                     </span>
-                    Analytics and reporting
+                    Mobile-first responsive design on all devices
                   </li>
                 </ul>
 
@@ -371,9 +360,8 @@ function Home() {
         </div>
       </section>
 
-      <div style={{ overflowX: "hidden" }}>
-        <TestimonialSlider />
-      </div>
+      <section id="testimonials" className=""></section>
+      <TestimonialSlider />
     </div>
   );
 }

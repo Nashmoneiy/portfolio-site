@@ -31,21 +31,6 @@
   
 }
 
-    @media (max-width: 752px) {
-  #section2{
-    position: relative;
-    margin-right: 12%;
-  }
-  #home{
-     position: relative;
-    margin-right: 12%;
-  }
-  #footer{
-     position: relative;
-    margin-right: 12%;
-  }
-  
-}
 
 
 
@@ -78,6 +63,8 @@ html {
 html, body {
   overflow-x: hidden;
 }
+
+
 
 
 
