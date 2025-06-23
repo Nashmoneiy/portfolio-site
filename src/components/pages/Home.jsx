@@ -2,6 +2,17 @@ import React from "react";
 import TestimonialSlider from "../inc/TestimonialSlider";
 import Footer from "../inc/Footer";
 
+import screenshotImg from "../images/Screenshot.png";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaLaravel,
+  FaPhp,
+  FaBootstrap,
+  FaGitAlt,
+} from "react-icons/fa";
 function Home() {
   return (
     <div
@@ -360,8 +371,103 @@ function Home() {
         </div>
       </section>
 
-      <section id="testimonials" className=""></section>
-      <TestimonialSlider />
+      <section id="testimonials" className="">
+        <TestimonialSlider />
+      </section>
+
+      <section
+        id="portfolio"
+        className="py-5 fade-down"
+        style={{ backgroundColor: "#fff" }}
+      >
+        <div className="container">
+          <div className="row text-center mb-4">
+            <div className="col-12">
+              <h4 className="fw-bold" style={{ color: "black" }}>
+                My Projects
+              </h4>
+              <p>
+                Take a look at some of the real-world projects I've delivered.
+              </p>
+            </div>
+          </div>
+
+          <div className="row justify-content-center gap-4">
+            <div className="col-md-4">
+              <div className="card shadow-sm">
+                <img
+                  src={screenshotImg}
+                  alt="Project 1"
+                  className="img-fluid"
+                />
+                <div className="card-body">
+                  <h5 className="card-title">E-commerce Store</h5>
+                  <p className="card-text">
+                    Fully responsive online store with payment gateway
+                    integration.
+                  </p>
+                  <a
+                    href="https://ecommerce-react-lcg7-oelrxrl4y-nashville.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-outline-primary btn-sm text-white"
+                    style={{
+                      background: "linear-gradient(90deg, #6a0dad, #0000ff)",
+                    }}
+                  >
+                    View Live
+                  </a>
+                </div>
+              </div>
+            </div>
+            {/* Repeat for more projects */}
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="tech-stack"
+        className="py-5 fade-down"
+        style={{ backgroundColor: "#f8f9fa" }}
+      >
+        <div className="container text-center">
+          <h4 className="fw-bold mb-4" style={{ color: "black" }}>
+            My Tech Stack
+          </h4>
+          <div className="row justify-content-center">
+            {[
+              { icon: <FaHtml5 color="#e34c26" size={40} />, name: "HTML5" },
+              { icon: <FaCss3Alt color="#1572B6" size={40} />, name: "CSS3" },
+              { icon: <FaJs color="#f7df1e" size={40} />, name: "JavaScript" },
+              { icon: <FaReact color="#61DBFB" size={40} />, name: "React" },
+              {
+                icon: <FaLaravel color="#ff2d20" size={40} />,
+                name: "Laravel",
+              },
+              { icon: <FaPhp color="#777bb4" size={40} />, name: "PHP" },
+
+              {
+                icon: <FaBootstrap color="#7952b3" size={40} />,
+                name: "Bootstrap",
+              },
+
+              { icon: <FaGitAlt color="#f1502f" size={40} />, name: "Git" },
+            ].map((tech, index) => (
+              <div className="col-4 col-sm-3 col-md-2 mb-4" key={index}>
+                <div className="d-flex flex-column align-items-center">
+                  {tech.icon}
+                  <span
+                    className="mt-2"
+                    style={{ fontSize: "0.9rem", fontWeight: "500" }}
+                  >
+                    {tech.name}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
