@@ -73,8 +73,9 @@ function Footer() {
             <i className="bi bi-envelope me-2"></i>kelvinnash152@gmail.com
           </p>
           <p className="mb-2" style={{ fontSize: "0.85rem" }}>
-            <i className="bi bi-phone me-2"></i>+234 8135817295
+            <i className="bi bi-phone me-2"></i>+234 8135817295(whatsapp)
           </p>
+
           <div className="d-flex gap-3 mt-2">
             {["facebook", "twitter", "instagram", "linkedin"].map((icon, i) => (
               <i
