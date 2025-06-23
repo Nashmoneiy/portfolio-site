@@ -27,17 +27,42 @@ function Footer() {
         <div style={{ flex: "1 1 150px" }}>
           <h6 className="fw-bold text-uppercase mb-2">Quick Links</h6>
           <ul className="list-unstyled mb-0">
-            {["Home", "Pricing", "Features", "Contact"].map((text, i) => (
-              <li key={i}>
-                <a
-                  href="#"
-                  className="text-white text-decoration-none d-block py-1"
-                  style={{ fontSize: "0.85rem" }}
-                >
-                  {text}
-                </a>
-              </li>
-            ))}
+            <li>
+              <a
+                href="#home"
+                className="text-white text-decoration-none d-block py-1"
+                style={{ fontSize: "0.85rem" }}
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#section3"
+                className="text-white text-decoration-none d-block py-1"
+                style={{ fontSize: "0.85rem" }}
+              >
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a
+                href="#section2"
+                className="text-white text-decoration-none d-block py-1"
+                style={{ fontSize: "0.85rem" }}
+              >
+                Features
+              </a>
+            </li>
+            <li>
+              <a
+                href="#footer"
+                className="text-white text-decoration-none d-block py-1"
+                style={{ fontSize: "0.85rem" }}
+              >
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
 

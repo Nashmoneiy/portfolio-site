@@ -16,20 +16,18 @@ function Navbar() {
   // Handle outside click
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      const collapse = document.getElementById("navbarSupportedContent");
       if (
-        collapse &&
-        collapse.classList.contains("show") &&
+        isOpen &&
         navbarRef.current &&
         !navbarRef.current.contains(event.target)
       ) {
-        collapse.classList.remove("show");
+        setIsOpen(false);
       }
     };
 
     document.addEventListener("click", handleOutsideClick);
     return () => document.removeEventListener("click", handleOutsideClick);
-  }, []);
+  }, [isOpen]);
 
   return (
     <div ref={navbarRef}>
@@ -139,18 +137,33 @@ function Navbar() {
 
           {/* Collapsed menu */}
           <div
-            className="collapse navbar-collapse custom-collapse w-100"
             id="navbarSupportedContent"
+            className={`w-100 ${
+              isOpen ? "d-flex" : "d-none"
+            } d-lg-flex flex-column flex-lg-row align-items-center justify-content-center`}
+            style={{
+              background: isOpen
+                ? "linear-gradient(135deg, blue, purple)"
+                : "transparent",
+              borderRadius: isOpen ? "0 0 12px 12px" : "0",
+              transition: "all 0.3s ease",
+              padding: isOpen ? "2rem 1rem" : "0",
+              minHeight: isOpen ? "200px" : "0",
+            }}
           >
             <ul
-              className="navbar-nav mb-2 mb-lg-0 float-lg-end ms-lg-auto d-lg-flex flex-column flex-lg-row align-items-center justify-content-center gap-2 gap-lg-0"
+              className="navbar-nav mb-2 mb-lg-0 float-lg-end ms-lg-auto d-lg-flex flex-column flex-lg-row align-items-center justify-content-center gap-3 gap-lg-0"
               style={{
-                fontSize: "1rem",
+                fontSize: "1.1rem",
                 fontWeight: "bold",
               }}
             >
               <li className="nav-item me-lg-4">
-                <a className="nav-link" href="#home" onClick={handleNavClick}>
+                <a
+                  className="nav-link"
+                  href="#home"
+                  onClick={() => setIsOpen(false)}
+                >
                   <span className="d-lg-none text-white">Home</span>
                   <span className="d-none d-lg-inline text-black">Home</span>
                 </a>
@@ -159,14 +172,18 @@ function Navbar() {
                 <a
                   className="nav-link"
                   href="#section2"
-                  onClick={handleNavClick}
+                  onClick={() => setIsOpen(false)}
                 >
                   <span className="d-lg-none text-white">About</span>
                   <span className="d-none d-lg-inline text-black">About</span>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#footer" onClick={handleNavClick}>
+                <a
+                  className="nav-link"
+                  href="#footer"
+                  onClick={() => setIsOpen(false)}
+                >
                   <span className="d-lg-none text-white">Contact</span>
                   <span className="d-none d-lg-inline text-black">Contact</span>
                 </a>

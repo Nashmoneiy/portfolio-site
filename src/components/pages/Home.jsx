@@ -107,7 +107,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="d-flex flex-wrap justify-content-center gap-4">
+          <div className="d-flex flex-wrap justify-content-center gap-5">
             {/* Card 1 */}
             <div
               style={{
@@ -295,7 +295,7 @@ function Home() {
                 <h5 className="fw-bold text-center">Premium plan</h5>
                 <p
                   className="text-muted text-center"
-                  style={{ fontSize: "0.9rem" }}
+                  style={{ fontSize: "1.8rem" }}
                 >
                   Starting at $60
                 </p>
