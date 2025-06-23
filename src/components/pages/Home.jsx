@@ -86,7 +86,7 @@ function Home() {
                   transition: "all 0.3s ease",
                 }}
               >
-                <span style={{ fontSize: "1.5rem" }}>★</span> Subscribe
+                <span style={{ fontSize: "1.5rem" }}>★</span> Reach us
               </button>
             </div>
           </div>

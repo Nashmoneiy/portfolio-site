@@ -139,12 +139,8 @@ function Navbar() {
 
           {/* Collapsed menu */}
           <div
-            className="collapse navbar-collapse w-100"
+            className="collapse navbar-collapse custom-collapse w-100"
             id="navbarSupportedContent"
-            style={{
-              background: "linear-gradient(135deg, blue, purple)",
-              borderRadius: "0 0 12px 12px",
-            }}
           >
             <ul
               className="navbar-nav mb-2 mb-lg-0 float-lg-end ms-lg-auto d-lg-flex flex-column flex-lg-row align-items-center justify-content-center gap-2 gap-lg-0"
