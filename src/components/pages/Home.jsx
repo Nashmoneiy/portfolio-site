@@ -407,7 +407,7 @@ function Home() {
                     integration.
                   </p>
                   <a
-                    href="https://ecommerce-react-lcg7-oelrxrl4y-nashville.vercel.app/"
+                    href="https://ecommerce-react-lcg7.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-outline-primary btn-sm text-white"
