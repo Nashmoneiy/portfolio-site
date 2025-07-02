@@ -16,18 +16,20 @@ function Navbar() {
   // Handle outside click
   useEffect(() => {
     const handleOutsideClick = (event) => {
+      const collapse = document.getElementById("navbarSupportedContent");
       if (
-        isOpen &&
+        collapse &&
+        collapse.classList.contains("show") &&
         navbarRef.current &&
         !navbarRef.current.contains(event.target)
       ) {
-        setIsOpen(false);
+        collapse.classList.remove("show");
       }
     };
 
     document.addEventListener("click", handleOutsideClick);
     return () => document.removeEventListener("click", handleOutsideClick);
-  }, [isOpen]);
+  }, []);
 
   return (
     <div ref={navbarRef}>
@@ -46,9 +48,11 @@ function Navbar() {
               href="#"
               className="navbar-brand m-0 p-0 d-flex align-items-center gap-3"
               style={{
-                fontWeight: "bold",
-                lineHeight: "1.2",
-                textDecoration: "none",
+                fontSize: "1.05rem",
+                fontWeight: 500,
+                fontFamily: "'Poppins', 'Rubik', sans-serif",
+                letterSpacing: "0.5px",
+                transition: "color 0.3s ease",
               }}
             >
               {/* Logo Icon - transparent background */}
@@ -68,16 +72,16 @@ function Navbar() {
               </div>
 
               {/* Brand Text */}
-              <div className="d-flex flex-column align-items-start">
+              <div className="d-flex flex-column align-items-start text-truncate">
                 <div>
                   <span
                     style={{
-                      fontSize: "2.2rem",
+                      fontSize: "2rem",
                       background: "linear-gradient(90deg, #6a0dad, #0000ff)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
-                      fontWeight: "bold",
-                      textShadow: "0 0 4px rgba(106, 13, 173, 0.4)",
+                      fontWeight: "800",
+                      fontFamily: "'Orbitron', sans-serif",
                     }}
                   >
                     Nashy
@@ -85,8 +89,8 @@ function Navbar() {
                   <span
                     style={{
                       marginLeft: "5px",
-                      fontSize: "1.7rem",
-                      fontWeight: "600",
+                      fontSize: "1.4rem",
+                      fontWeight: "800",
                       color: "#6a0dad",
                       fontFamily: "'Orbitron', sans-serif",
                     }}
@@ -140,30 +144,24 @@ function Navbar() {
             id="navbarSupportedContent"
             className={`w-100 ${
               isOpen ? "d-flex" : "d-none"
-            } d-lg-flex flex-column flex-lg-row align-items-center justify-content-center`}
+            } d-lg-flex flex-column flex-lg-row`}
             style={{
               background: isOpen
                 ? "linear-gradient(135deg, blue, purple)"
                 : "transparent",
               borderRadius: isOpen ? "0 0 12px 12px" : "0",
               transition: "all 0.3s ease",
-              padding: isOpen ? "2rem 1rem" : "0",
-              minHeight: isOpen ? "200px" : "0",
             }}
           >
             <ul
-              className="navbar-nav mb-2 mb-lg-0 float-lg-end ms-lg-auto d-lg-flex flex-column flex-lg-row align-items-center justify-content-center gap-3 gap-lg-0"
+              className="navbar-nav mb-2 mb-lg-0 float-lg-end ms-lg-auto d-lg-flex flex-column flex-lg-row align-items-center justify-content-center gap-2 gap-lg-0"
               style={{
-                fontSize: "1.1rem",
+                fontSize: "1rem",
                 fontWeight: "bold",
               }}
             >
               <li className="nav-item me-lg-4">
-                <a
-                  className="nav-link"
-                  href="#home"
-                  onClick={() => setIsOpen(false)}
-                >
+                <a className="nav-link" href="#home" onClick={handleNavClick}>
                   <span className="d-lg-none text-white">Home</span>
                   <span className="d-none d-lg-inline text-black">Home</span>
                 </a>
@@ -172,18 +170,14 @@ function Navbar() {
                 <a
                   className="nav-link"
                   href="#section2"
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleNavClick}
                 >
                   <span className="d-lg-none text-white">About</span>
                   <span className="d-none d-lg-inline text-black">About</span>
                 </a>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link"
-                  href="#footer"
-                  onClick={() => setIsOpen(false)}
-                >
+                <a className="nav-link" href="#footer" onClick={handleNavClick}>
                   <span className="d-lg-none text-white">Contact</span>
                   <span className="d-none d-lg-inline text-black">Contact</span>
                 </a>

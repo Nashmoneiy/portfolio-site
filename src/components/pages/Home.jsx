@@ -3,6 +3,7 @@ import TestimonialSlider from "../inc/TestimonialSlider";
 import Footer from "../inc/Footer";
 
 import screenshotImg from "../images/Screenshot.png";
+import screenshot2 from "../images/Screenshot2.png";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -19,7 +20,11 @@ function Home() {
       id="home"
       style={{ margin: 0, padding: 0, overflowX: "hidden", width: "100%" }}
     >
-      <section id="home" className="section justify-content-center fade-down">
+      <section
+        id="home"
+        className="section justify-content-center fade-down"
+        style={{ backgroundColor: "#f0f4f8" }}
+      >
         <div className="row">
           <div className="col-md-12 text-center justify-content-center">
             {/* Icon */}
@@ -85,6 +90,7 @@ function Home() {
             <div className="d-flex justify-content-center my-4">
               <button
                 className="btn text-white d-flex align-items-center justify-content-center gap-2"
+                id="reach-us"
                 style={{
                   width: "15%",
                   minWidth: "140px",
@@ -95,6 +101,11 @@ function Home() {
                   borderRadius: "8px",
                   fontFamily: "'Poppins', sans-serif",
                   transition: "all 0.3s ease",
+                }}
+                onClick={() => {
+                  document.getElementById("footer")?.scrollIntoView({
+                    behavior: "smooth",
+                  });
                 }}
               >
                 <span style={{ fontSize: "1.5rem" }}>★</span> Reach us
@@ -153,14 +164,11 @@ function Home() {
               >
                 Stand out online with a fast, mobile-friendly website
               </p>
-              <p>
+              <p style={{ fontSize: "20px" }}>
                 I create clean, modern websites tailored to your brand. Designed
                 to convert visitors into paying customers.
               </p>
-              <a
-                href="#contact"
-                style={{ color: "purple", fontWeight: "bold" }}
-              >
+              <a href="#footer" style={{ color: "purple", fontWeight: "bold" }}>
                 Get started →
               </a>
             </div>
@@ -199,14 +207,11 @@ function Home() {
               >
                 Launch your online store with confidence
               </p>
-              <p>
+              <p style={{ fontSize: "20px" }}>
                 From product setup to payment integration, I’ll build a powerful
                 online store that runs smoothly on all devices.
               </p>
-              <a
-                href="#contact"
-                style={{ color: "purple", fontWeight: "bold" }}
-              >
+              <a href="#footer" style={{ color: "purple", fontWeight: "bold" }}>
                 Build your store →
               </a>
             </div>
@@ -245,14 +250,11 @@ function Home() {
               >
                 Get found faster. Load faster. Convert better.
               </p>
-              <p>
+              <p style={{ fontSize: "20px" }}>
                 I optimize every website for speed, mobile usability, and search
                 engines — so your business performs at its best.
               </p>
-              <a
-                href="#contact"
-                style={{ color: "purple", fontWeight: "bold" }}
-              >
+              <a href="#footer" style={{ color: "purple", fontWeight: "bold" }}>
                 Optimize now →
               </a>
             </div>
@@ -263,7 +265,7 @@ function Home() {
       <section
         id="section3"
         className="section bg-c-light py-5 fade-down"
-        style={{ backgroundColor: "#f8f9fa" }}
+        style={{ backgroundColor: "#f0f4f8" }}
       >
         <div className="container">
           <div className="row text-center mb-4">
@@ -350,21 +352,7 @@ function Home() {
                   </li>
                 </ul>
 
-                <div className="text-center mt-3">
-                  <button
-                    className="btn"
-                    style={{
-                      backgroundColor: "#6a0dad", // solid purple background
-                      color: "#fff", // white text
-                      fontWeight: "bold",
-                      border: "none",
-                      padding: "0.6rem 1.2rem",
-                      borderRadius: "8px",
-                    }}
-                  >
-                    View pricing →
-                  </button>
-                </div>
+                <div className="text-center mt-3"></div>
               </div>
             </div>
           </div>
@@ -378,7 +366,7 @@ function Home() {
       <section
         id="portfolio"
         className="py-5 fade-down"
-        style={{ backgroundColor: "#fff" }}
+        style={{ backgroundColor: "#f0f4f8" }}
       >
         <div className="container">
           <div className="row text-center mb-4">
@@ -408,6 +396,30 @@ function Home() {
                   </p>
                   <a
                     href="https://ecommerce-react-lcg7.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-outline-primary btn-sm text-white"
+                    style={{
+                      background: "linear-gradient(90deg, #6a0dad, #0000ff)",
+                    }}
+                  >
+                    View Live
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-4">
+              <div className="card shadow-sm">
+                <img src={screenshot2} alt="Project 1" className="img-fluid" />
+                <div className="card-body">
+                  <h5 className="card-title">Eucia Bookings</h5>
+                  <p className="card-text">
+                    Fully responsive webapp for purchasing movie tickets with
+                    payment gateway integration.
+                  </p>
+                  <a
+                    href="https://tickets-25h4.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-outline-primary btn-sm text-white"
